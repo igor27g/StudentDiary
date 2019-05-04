@@ -20,7 +20,7 @@ namespace Odcinek_10
 
 			Diary diary3 = diary2;
 			diary3.AddRating(1);
-
+			 
 		}
 	}
 }
