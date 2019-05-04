@@ -11,9 +11,10 @@ namespace StudentDiary
 		static void Main(string[] args)
 		{
 
-		
+
 
 			Diary diary = new Diary();
+
 			//diary.AddRating(5);
 			//diary.AddRating(0.5f);
 			//diary.AddRating(4.7f);
