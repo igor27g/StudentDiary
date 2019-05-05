@@ -20,7 +20,12 @@ namespace Odcinek_10
 
 			Diary diary3 = diary2;
 			diary3.AddRating(1);
-			 
+
+			diary3.CalculateAverage();
+
+			List<int> lista = new List<int>();
+			lista.
+
 		}
 	}
 }

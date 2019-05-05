@@ -15,14 +15,18 @@ namespace StudentDiary
 
 			Diary diary = new Diary();
 
-			//diary.AddRating(5);
-			//diary.AddRating(0.5f);
-			//diary.AddRating(4.7f);
+			diary.AddRating(5);
+			diary.AddRating(8.5f);
+			diary.AddRating(4.7f);
 
-			//float avg = diary.CalculateAverage();
-			//float max = diary.GiveMinRating();
-			//float min = diary.GiveMinRating();
+			DiaryStatistics stats = diary.ComputerStatistics();
 
+			Console.WriteLine("Srednia wartosc" + stats.AverageGrade);
+			Console.WriteLine("Maksymalna wartosc" + stats.MaxGrade);
+			Console.WriteLine("Minimalna wartosc" + stats.MinGrade);
+
+
+			/*
 			for (; ; )
 			{
 				Console.WriteLine("Poda ocenę z zakresu 1 - 10");
@@ -56,6 +60,7 @@ namespace StudentDiary
 			Console.WriteLine("Najwyższa ocena to : " + diary.GiveMaxRating());
 			Console.WriteLine("Najniższa ocena to : " + diary.GiveMinRating());
 			Console.ReadKey();
+			*/
 
 		}
 	}

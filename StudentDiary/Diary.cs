@@ -20,6 +20,24 @@ namespace StudentDiary
 			ratings = new List<float>();		
 		}
 
+		internal DiaryStatistics ComputerStatistics()
+		{
+			DiaryStatistics stats = new DiaryStatistics();
+
+			float sum = 0f;
+
+			foreach (var rating in ratings)
+			{
+				sum += rating;
+			}
+
+			stats.AverageGrade = sum / ratings.Count();
+			stats.MaxGrade = ratings.Max();
+			stats.MinGrade = ratings.Min();
+
+			return stats;
+		}
+
 		#endregion
 
 		//Stan (zmienne - pola)
@@ -29,32 +47,36 @@ namespace StudentDiary
 		/// </summary>
 		List<float> ratings;
 
-		//Zachowania
+		/// <summary>
+		/// Add rating
+		/// </summary>
+		/// <param name="rating">New rating</param>
 		public void AddRating(float rating)
 		{
 			ratings.Add(rating);
 		}
 
-		public float CalculateAverage()
-		{
-			float sum = 0;
-			float avg = 0;
 
-			foreach (var rating in ratings)
-			{
-				sum += rating;
-			}
 
-			avg = sum / ratings.Count();
+		/// <summary>
+		/// Calculate average ratings
+		/// </summary>
+		/// <returns></returns>
+		
 
-			return avg;
-		}
-
+		/// <summary>
+		/// Take the highest rating
+		/// </summary>
+		/// <returns></returns>
 		public float GiveMaxRating()
 		{
 			return ratings.Max();
 		}
 
+		/// <summary>
+		/// Take the lowest rating
+		/// </summary>
+		/// <returns></returns>
 		public float GiveMinRating()
 		{
 			return ratings.Min();
